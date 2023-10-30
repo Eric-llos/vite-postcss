@@ -8,8 +8,8 @@ const config = {
   atImport: {
     path: [
       "tailwind.config.js",
-      "assets/css/*.pcss",
-      "assets/css/**/*.pcss",
+      "assets/css/*.css",
+      "assets/css/**/*.css",
       "assets/css/",
     ],
   },
@@ -24,22 +24,19 @@ const config = {
   purgecss: {
     content: [
       "**/*.php",
-      "./views/**/*.twig",
-      "./assets/**/*.pcss",
-      "./assets/**/*.svg",
-      "./assets/**/*.js"
+      "views/**/*.twig",
+      "assets/**/*.css",
+      "assets/**/*.svg",
+      "assets/**/*.js"
     ],
     extractors: [{
-      extensions: ["php", "twig", "pcss", "svg", "js"],
-      extractor: class TailwindExtractor {
-        static extract(content) {
-          return content.match(/[A-Za-z0-9-_:/]+/g) || [];
-        }
+      extensions: ["php", "twig", "css", "svg", "js"],
+      extractor: function (content) {
+        return content.match(/[A-Za-z0-9-_:/]+/g) || [];
       },
     }],
-    // whitelist: purgecssWordpress.whitelist,
-    // whitelistPatterns: purgecssWordpress.whitelistPatterns.concat([]),
   },
+  
 };
 
 export default {
