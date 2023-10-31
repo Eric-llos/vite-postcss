@@ -19,9 +19,11 @@
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^9.2.0",
     "stylelint": "^15.11.0",
+    "postcss-mixins": "^9.0.4",
     "stylelint-config-manzdev": "^0.0.12",
     "vite": "^4.5.0"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

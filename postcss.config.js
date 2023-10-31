@@ -3,6 +3,7 @@ import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import perfectionist from "perfectionist";
 import presetEnv from "postcss-preset-env";
+import postcssMixins from "postcss-mixins";
 
 const config = {
   atImport: {
@@ -46,5 +47,6 @@ export default {
     postcssImport(config.atImport),
     purgecss(config.purgecss),
     perfectionist(config.perfectionist),
+    postcssMixins()
   ]
 };

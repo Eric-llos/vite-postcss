@@ -1,4 +1,9 @@
+@import '../assets/css/main.css';
+
+
 body {
   background: #223;
   color: yellow;
+  @mixin cookies;
 }
+
